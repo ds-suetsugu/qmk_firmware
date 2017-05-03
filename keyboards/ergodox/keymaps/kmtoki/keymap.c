@@ -15,11 +15,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * .-------------------------------------------------.           .--------------------------------------------------.
  * |        |  1! |   2@ |   3# |   4$ |   5% |      |           |      |   6^ |   7& |   8* |  9(  |  0)  |        |
  * |--------+-----+------+------+------+-------------|           |------+------+------+------+------+------+--------|
- * | ESC    |  Q  |   W  |   E  |   R  |   T  |Cmd-{ |           |Cmd-} |   Y  |   U  |   I  |   O  |  P   |   -_   |
+ * | `~     |  Q  |   W  |   E  |   R  |   T  |Cmd-{ |           |Cmd-} |   Y  |   U  |   I  |   O  |  P   |   -_   |
  * |--------+-----+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * | \|     |A L2 |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |;: L2 |   '"   |
+ * | ESC    |A L2 |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |;: L2 |   '"   |
  * |--------+-----+------+------+------+------| Eisu |           | Kana |------+------+------+------+------+--------|
- * | `~     |Z Crl|   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |  ,<  |  .>  |/? Crl|   =+   |
+ * | \|     |Z Crl|   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |  ,<  |  .>  |/? Crl|   =+   |
  * `--------+-----+------+------+------+-------------'           `-------------+------+------+------+------+--------'
  *   |      |     |      |  Alt |  Cmd |                                       | Cmd  |  Alt |  [{  |  ]}  |      |
  *   `---------------------------------'                                       `----------------------------------'
@@ -36,9 +36,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [BASE] = KEYMAP(  // layer 0 : default
         // left hand
         KC_TRNS,         KC_1,             KC_2,      KC_3,      KC_4,     KC_5,                KC_TRNS,
-        KC_ESC,          KC_Q,             KC_W,      KC_E,      KC_R,     KC_T,                PREVTAB,
-        KC_BSLS,         LT(MDIA,KC_A),    KC_S,      KC_D,      KC_F,     KC_G,
-        KC_GRV,          CTL_T(KC_Z),      KC_X,      KC_C,      KC_V,     KC_B,                KC_LANG2,
+        KC_GRV,          KC_Q,             KC_W,      KC_E,      KC_R,     KC_T,                PREVTAB,
+        KC_ESC,          LT(MDIA,KC_A),    KC_S,      KC_D,      KC_F,     KC_G,
+        KC_BSLS,         CTL_T(KC_Z),      KC_X,      KC_C,      KC_V,     KC_B,                KC_LANG2,
         KC_TRNS,         KC_TRNS,          KC_TRNS,   KC_LALT,   KC_LGUI,
                                                                                   ALT_T(KC_ESC), TG(SYMB),
                                                                                                  KC_HOME,
