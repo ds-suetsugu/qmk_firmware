@@ -17,11 +17,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * ,--------------------------------------------------------------------------------------.
    * | Tab   |   Q  |   W  |   E  |   R   |   T  |   Y   |   U  |   I  |   O  |   P  | Bksp |
    * |-------+------+------+------+-------+------|-------+------+------+------+------+------|
-   * |Esc/Ctl|   A  |   S  |   D  |   F   |   G  |   H   |   J  |   K  |   L  |  ;:  |  '"  |
+   * |Esc/Ctl| A/Md |   S  |   D  |   F   |   G  |   H   |   J  |   K  |   L  |;:/Md |  '"  |
    * |-------+------+------+------+-------+------|-------+------+------+------+------+------|
    * | Eisu  |   Z  |   X  |   C  |   V   |   B  |   N   |   M  |  ,<  |  .>  |  /?  | Kana |
    * |-------+------+------+------+-------+------|-------+------+------+------+------+------|
-   * |       | Media| Alt  | GUI  | Lower |Sp/Sft|Ent/Sft| Raise| GUI  | ALT  | Media|      |
+   * |       |      | Alt  | GUI  | Lower |Sp/Sft|Ent/Sft| Raise| GUI  | ALT  |      |      |
    * `--------------------------------------------------------------------------------------'
    */
   [QWERTY] = KEYMAP( \
@@ -69,19 +69,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   /* Media 
    * ,-----------------------------------------------------------------------------------.
-   * |  F1  |  F2  |  F3  |  F4  |  F5  |  F6  |  F7  |  F8  |  F9  |  F10 |  F11 |  F12 |
+   * |      |      | WhUp | MsUp | WhDn |      |  End | PgDn |  Up  | PgUp | Home |      |
    * |------+------+------+------+------+------|------+------+------+------+------+------|
-   * |MsWhUp| MsLf | MsUp | MsDn | MsRg |MsWhDn|PageDn|CrsrLf|CrsrDn|CrsrUp|CrsrRg|PageUp|
+   * |      |      | MsLf | MsDn | MsRg |      |      | Left | Down | Right|      |      |
    * |------+------+------+------+------+------|------+------+------+------+------+------|
    * |      |      |      |      |      |      | Prev |StpPly| Next |Mute  |VolDn |VolUp |
    * |------+------+------+------+------+------|------+------+------+------+------+------|
    * |Reset |      |      |      |ClickL|ClickR|      |      |      |      |      |Reset |
    * `-----------------------------------------------------------------------------------'
    */
+ 
   [MEDIA] = KEYMAP( \
-    KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,   KC_F12,  \
-    KC_WH_U, KC_MS_L, KC_MS_U, KC_MS_D, KC_MS_R, KC_WH_D, KC_PGDN, KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT, KC_PGUP, \
-    _______, _______, _______, _______, _______, _______, KC_MPRV, KC_MPLY, KC_MNXT, KC_MUTE, KC_VOLD,  KC_VOLU, \
-    RESET,   _______, _______, _______, KC_BTN1, KC_BTN2, _______, _______, _______, _______, _______,  RESET    \
-  ),
+    _______, _______, KC_WH_U, KC_MS_U, KC_WH_D, _______, KC_END,  KC_PGDN, KC_UP,   KC_PGUP,  KC_HOME,  _______, \
+    _______, _______, KC_MS_L, KC_MS_D, KC_MS_R, _______, _______, KC_LEFT, KC_DOWN, KC_RIGHT, _______,  _______, \
+    _______, _______, _______, _______, _______, _______, KC_MPRV, KC_MPLY, KC_MNXT, KC_MUTE,  KC_VOLD,  KC_VOLU, \
+    RESET,   _______, _______, _______, KC_BTN1, KC_BTN2, _______, _______, _______, _______,  _______,  RESET    \
+  )
 };
