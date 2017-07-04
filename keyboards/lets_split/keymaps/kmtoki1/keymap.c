@@ -27,8 +27,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [QWERTY] = KEYMAP( \
     KC_TAB,        KC_Q,           KC_W,    KC_E,    KC_R,      KC_T,           KC_Y,           KC_U,      KC_I,    KC_O,    KC_P,               KC_BSPC,  \
     CTL_T(KC_ESC), LT(MEDIA,KC_A), KC_S,    KC_D,    KC_F,      KC_G,           KC_H,           KC_J,      KC_K,    KC_L,    LT(MEDIA, KC_SCLN), KC_QUOT,  \
-    KC_EQL,        KC_Z,           KC_X,    KC_C,    KC_V,      KC_B,           KC_N,           KC_M,      KC_COMM, KC_DOT,  KC_SLSH,            KC_MINS,  \
-    MO(RAISE),     KC_LANG2,       KC_LALT, KC_LGUI, MO(LOWER), SFT_T(KC_SPC),  SFT_T(KC_ENT),  MO(LOWER), KC_RGUI, KC_RALT, KC_LANG1,           MO(RAISE) \
+    KC_LANG2,      KC_Z,           KC_X,    KC_C,    KC_V,      KC_B,           KC_N,           KC_M,      KC_COMM, KC_DOT,  KC_SLSH,            KC_LANG1, \
+    _______,       MO(RAISE),      KC_LALT, KC_LGUI, MO(LOWER), SFT_T(KC_SPC),  SFT_T(KC_ENT),  MO(LOWER), KC_RGUI, KC_RALT, MO(RAISE),          _______   \
   ),
 
   /* Lower 
@@ -45,7 +45,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [LOWER] = KEYMAP( \
     _______, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    _______, \
     KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_GRV,  \
-    _______, KC_TILD, KC_GRV,  KC_PIPE, KC_BSLS, KC_PLUS, KC_EQL,  KC_LBRC, KC_RBRC, KC_LCBR, KC_RCBR, _______, \
     _______, KC_PIPE, KC_BSLS, KC_PLUS, KC_EQL,  KC_UNDS, KC_MINS, KC_LBRC, KC_RBRC, KC_LCBR, KC_RCBR, _______, \
     _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______  \
   ),
@@ -85,6 +84,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, _______, KC_WH_U, KC_MS_U, KC_WH_D, _______, KC_END,  KC_PGDN, KC_UP,   KC_PGUP,  KC_HOME,  _______, \
     RESET,   _______, KC_MS_L, KC_MS_D, KC_MS_R, _______, _______, KC_LEFT, KC_DOWN, KC_RIGHT, _______,  RESET,   \
     _______, _______, _______, _______, _______, _______, KC_MPRV, KC_MPLY, KC_MNXT, KC_MUTE,  KC_VOLD,  KC_VOLU, \
-    _______, _______, _______, _______, KC_BTN1, KC_BTN2, _______, _______, _______, _______,  _______,  _______, \
+    _______, _______, _______, _______, KC_BTN1, KC_BTN2, _______, _______, _______, _______,  _______,  _______ \
   )
 };
