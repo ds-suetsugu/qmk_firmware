@@ -18,38 +18,38 @@ extern keymap_config_t keymap_config;
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   /* Qwerty
    * ,-------------------------------------------, ,------------------------------------------,
-   * | Tab   |   Q  |   W  |   E  |   R   |   T  | |   Y   |   U  |   I  |   O  |   P  | Bksp |
+   * | Tab   |   Q  |   W  |   E  |   R   |   T  | |   Y   |   U  |   I  |   O  |   P  |  BS  |
    * |-------+------+------+------+-------+------| |-------+------+------+------+------+------|
    * |Esc/Ctl| A/Md |   S  |   D  |   F   |   G  | |   H   |   J  |   K  |   L  |;:/Md |'"/Ctl|
    * |-------+------+------+------+-------+------| |-------+------+------+------+------+------|
-   * | Eisu  |   Z  |   X  |   C  |   V   |   B  | |   N   |   M  |  ,<  |  .>  |  /?  | Kana |
+   * |       |   Z  |   X  |   C  |   V   |   B  | |   N   |   M  |  ,<  |  .>  |  /?  |      |
    * |-------+------+------+------+-------+------| |-------+------+------+------+------+------|
-   * |PREVTAB| Raise| Alt  | GUI  | Lower |Sp/Sft| |Ent/Sft| Lower| GUI  | ALT  | Raise|NEXTAB|
+   * |       | Raise| Alt  | GUI  | Lower |Sp/Sft| |Ent/Sft| Lower| GUI  | ALT  | Raise|      |
    * `-------------------------------------------' `------------------------------------------'
    */
   [QWERTY] = KEYMAP( \
     KC_TAB,        KC_Q,           KC_W,    KC_E,    KC_R,      KC_T,           KC_Y,           KC_U,      KC_I,    KC_O,    KC_P,               KC_BSPC,  \
     CTL_T(KC_ESC), LT(MEDIA,KC_A), KC_S,    KC_D,    KC_F,      KC_G,           KC_H,           KC_J,      KC_K,    KC_L,    LT(MEDIA, KC_SCLN), CTL_T(KC_QUOT), \
-    KC_LANG2,      KC_Z,           KC_X,    KC_C,    KC_V,      KC_B,           KC_N,           KC_M,      KC_COMM, KC_DOT,  KC_SLSH,            KC_LANG1, \
-    PREVTAB,       MO(RAISE),      KC_LALT, KC_LGUI, MO(LOWER), SFT_T(KC_SPC),  SFT_T(KC_ENT),  MO(LOWER), KC_RGUI, KC_RALT, MO(RAISE),          NEXTTAB   \
+    KC_EQL,        KC_Z,           KC_X,    KC_C,    KC_V,      KC_B,           KC_N,           KC_M,      KC_COMM, KC_DOT,  KC_SLSH,            KC_MINS, \
+    _______,       MO(RAISE),      KC_LALT, KC_LGUI, MO(LOWER), SFT_T(KC_SPC),  SFT_T(KC_ENT),  MO(LOWER), KC_RGUI, KC_RALT, MO(RAISE),          _______  \
   ),
 
   /* Lower 
    * ,-----------------------------------------, ,-----------------------------------------,
    * |      |   1  |   2  |   3  |   4  |   5  | |   6  |   7  |   8  |   9  |   0  |      |
    * |------+------+------+------+------+------| |------+------+------+------+------+------|
-   * |  ~   |   !  |   @  |   #  |   $  |   %  | |   ^  |   &  |   *  |   (  |   )  |  `   |
+   * |      |   !  |   @  |   #  |   $  |   %  | |   ^  |   &  |   *  |   (  |   )  |      |
    * |------+------+------+------+------+------| |------+------+------+------+------+------|
-   * |      |   |  |   \  |   +  |   =  |   _  | |   -  |   [  |   ]  |   {  |   }  |      |
+   * |      |   ~  |   `  |   |  |   \  |      | |      |   [  |   ]  |   {  |   }  |      |
    * |------+------+------+------+------+------| |------+------+------+------+------+------|
-   * |      |      |      |      |      |      | |      |      |      |      |      |      |
+   * | PREV |      |      |      | Eisu |  BS  | | Tab  | Kana |      |      |      | NEXT |
    * `-----------------------------------------' `-----------------------------------------'
    */
   [LOWER] = KEYMAP( \
-    _______, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    _______, \
-    KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_GRV,  \
-    _______, KC_PIPE, KC_BSLS, KC_PLUS, KC_EQL,  KC_UNDS, KC_MINS, KC_LBRC, KC_RBRC, KC_LCBR, KC_RCBR, _______, \
-    _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______  \
+    _______, KC_1,    KC_2,    KC_3,    KC_4,     KC_5,    KC_6,    KC_7,     KC_8,    KC_9,    KC_0,    _______, \
+    _______, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,   KC_PERC, KC_CIRC, KC_AMPR,  KC_ASTR, KC_LPRN, KC_RPRN, _______, \
+    _______, KC_TILD, KC_GRV, KC_PIPE, KC_BSLS,   _______, _______, KC_LBRC,  KC_RBRC, KC_LCBR, KC_RCBR, _______, \
+    PREVTAB, _______, _______, _______, KC_LANG2, KC_BSPC, KC_TAB,  KC_LANG1, _______, _______, _______, NEXTTAB  \
   ),
 
   /* Raise 
