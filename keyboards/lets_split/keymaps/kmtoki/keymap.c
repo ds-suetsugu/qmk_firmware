@@ -12,6 +12,7 @@ extern keymap_config_t keymap_config;
 #define _______ KC_TRNS
 #define XXXXXXX KC_NO
 
+// for MacOS
 #define NEXTTAB ACTION_MODS_KEY(MOD_LGUI, KC_RCBR)
 #define PREVTAB ACTION_MODS_KEY(MOD_LGUI, KC_LCBR)
 
