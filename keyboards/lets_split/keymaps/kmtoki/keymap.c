@@ -15,8 +15,8 @@ enum LAYER {
 #define ____ KC_TRNS
 #define XXXX KC_NO
 
-#define TNEXT LGUI(KC_RBRC)
-#define TPREV LGUI(KC_LBRC)
+#define TNEXT LGUI(KC_RCBR)
+#define TPREV LGUI(KC_LCBR)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -78,7 +78,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-----------------------------------------------------------------------------------.
  * |  F1  |  F2  |  F3  |  F4  |  F5  |  F6  |  F7  |  F8  |  F9  |  F10 |  F11 |  F12 |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * |      |      |      |      |      |      |      |      |      |TNEXT |TPREV |      |
+ * |      |      |      |      |      |      |      |TNEXT |TPREV |      |      |      |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
  * |      |      |      |      |      |      |      |      |      |      |      |      |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
