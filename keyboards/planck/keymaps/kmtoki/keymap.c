@@ -314,6 +314,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
          register_code(KC_LANG1);
          unregister_code(KC_LANG1);
         }
+        ime_state = !ime_state;
       }
       break;
   }
