@@ -46,8 +46,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     {KC_TAB,           KC_Q,    KC_W,    KC_E,     KC_R,      KC_T,    PREVTAB,  NEXTTAB,  KC_Y,  KC_U, KC_I,    KC_O,             KC_P,     KC_BSPC},
     {KC_LCTL, LT(MISC, KC_A),   KC_S,    KC_D,     KC_F,      KC_G,    KC_LANG2, KC_LANG1, KC_H,  KC_J, KC_K,    KC_L,   LT(MISC,  KC_SCLN), KC_QUOT},
     {KC_ESC,           KC_Z,    KC_X,    KC_C,     KC_V,      KC_B,    XXXX,     XXXX,     KC_N,  KC_M, KC_COMM, KC_DOT,           KC_SLSH,  KC_MINS},
-    {XXXX,    XXXX,          KC_LGUI,    XXXX,     MO(LOWER), SFT_T(KC_SPC), KC_LALT,
-     KC_RALT, SFT_T(KC_ENT), MO(RAISE),  XXXX,     KC_RGUI,  XXXX,           XXXX}
+    {XXXX,    XXXX,    KC_LCTL, KC_LGUI,       MO(LOWER), SFT_T(KC_SPC), KC_LALT,
+     KC_RALT, SFT_T(KC_ENT), MO(RAISE), KC_RCTL, KC_RGUI,       XXXX,    XXXX}
   },
 
   /* Colemak
@@ -61,8 +61,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     {KC_TAB,           KC_Q,    KC_W,     KC_F,    KC_P,      KC_G,          PREVTAB,  NEXTTAB,  KC_J,          KC_L,      KC_U,    KC_Y,     KC_SCLN, KC_BSPC},
     {KC_LCTL, LT(MISC, KC_A),   KC_R,     KC_S,    KC_T,      KC_D,          KC_LANG2, KC_LANG1, KC_H,          KC_N,      KC_E,    KC_I,     LT(MISC, KC_O),    KC_QUOT},
     {KC_ESC,           KC_Z,    KC_X,     KC_C,    KC_V,      KC_B,          XXXX,     XXXX,     KC_K,          KC_M,      KC_COMM, KC_DOT,   KC_SLSH, KC_MINS},
-    {XXXX,             XXXX,    KC_LGUI,  XXXX,    MO(LOWER), SFT_T(KC_SPC), KC_LALT,
-      KC_RALT,  SFT_T(KC_ENT), MO(RAISE), XXXX,    KC_RGUI,   XXXX,          XXXX}
+    {XXXX, XXXX, ____, ____, ____, ____, ____, ____, ____, ____, ____, ____, XXXX, XXXX}
   },
 
   /* Dvorak
@@ -76,8 +75,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     {KC_TAB,           KC_QUOT, KC_COMM,  KC_DOT,  KC_P,      KC_Y,          PREVTAB,  NEXTTAB,  KC_F,          KC_G,      KC_C,    KC_R,          KC_L,  KC_BSPC},
     {KC_LCTL, LT(MISC, KC_A),   KC_O,     KC_E,    KC_U,      KC_I,          KC_LANG2, KC_LANG1, KC_D,          KC_H,      KC_T,    KC_N, LT(MISC, KC_S), KC_MINS},
     {KC_ESC,           KC_SCLN, KC_Q,     KC_J,    KC_K,      KC_X,          XXXX,     XXXX,     KC_B,          KC_M,      KC_W,    KC_V,          KC_Z,  KC_SLSH},
-    {XXXX,     XXXX,          KC_LGUI,   XXXX, MO(LOWER),    SFT_T(KC_SPC), KC_LALT,
-     KC_RALT,  SFT_T(KC_ENT), MO(RAISE), XXXX, KC_RGUI,      XXXX,          XXXX}
+    {XXXX, XXXX, ____, ____, ____, ____, ____, ____, ____, ____, ____, ____, XXXX, XXXX}
   },
 
   [LOWER] = {
@@ -95,10 +93,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   },
 
   [MISC] = {
-    {KC_F1, KC_F2, KC_F3,   KC_F4,   KC_F5,   KC_F6,   ____, ____, KC_F7,   KC_F8,   KC_F9,   KC_F10,   KC_F11,  KC_F12},
-    {____,  ____,  KC_MS_L, KC_MS_U, KC_MS_D, KC_MS_R, ____, ____, KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT, ____,    ____},
-    {RESET, ____,  ____,    ____,    ____,    ____,    XXXX, XXXX, KC_MPRV, KC_MPLY, KC_MNXT, KC_MUTE,  KC_VOLD, KC_VOLU},
-    {XXXX,  XXXX,  ____,    ____,    ____,    KC_BTN1, KC_BTN2, ____, ____, TG(QWERTY),  TG(COLEMAK), TG(DVORAK),    XXXX,    XXXX}
+    {RESET, ____,  KC_MS_WH_UP, KC_MS_U, KC_MS_WH_DOWN, ____,    ____,    ____, KC_HOME, KC_PGDOWN,  KC_UP,       KC_PGUP,    ____,   ____,    },
+    {____,  ____,  KC_MS_L,     KC_MS_D, KC_MS_R,       ____,    ____,    ____, KC_END,  KC_LEFT,    KC_DOWN,     KC_RIGHT,   ____,   ____},
+    {KC_F1, KC_F2, KC_F3,       KC_F4,   KC_F5,         KC_F6,   XXXX,    XXXX, KC_F7,   KC_F8,      KC_F9,       KC_F10,     KC_F11, KC_F12},
+    {XXXX,  XXXX,  ____,        ____,    ____,          KC_BTN1, KC_BTN2, ____, ____,    TG(QWERTY), TG(COLEMAK), TG(DVORAK), XXXX,   XXXX}
   },
 };
 
