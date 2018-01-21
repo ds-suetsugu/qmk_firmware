@@ -47,6 +47,8 @@ OPT_DEFS += -DINTERRUPT_CONTROL_ENDPOINT
 #   USBaspLoader     2048
 OPT_DEFS += -DBOOTLOADER_SIZE=4096
 
+BOOTLOADER = caterina
+
 
 # Build Options
 #   change yes to no to disable
