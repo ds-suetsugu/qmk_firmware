@@ -28,9 +28,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define PRODUCT         craven
 #define DESCRIPTION     A custom keyboard
 
-#define USE_BLUEFRUIT
+//#define USE_BLUEFRUIT
 
-//#define CATERINA_BOOTLOADER
+#define CATERINA_BOOTLOADER
 
 /* key matrix size */
 #define MATRIX_ROWS 4
